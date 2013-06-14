@@ -51,9 +51,9 @@ define(['text!./repos.html', 'underscore'], function (tpl, _) {
         // Remove forked repositories 
         // we have to do this client side, Github API does not seem
         // to allow filtering on unauthenticated calls
-        repos = _.reject(repos, function(repo) {
-          return (repo.fork);
-        });
+        //repos = _.reject(repos, function(repo) {
+        //  return (repo.fork);
+        //});
         // And sort by popularity
         repos = _.sortBy(repos, function(repo) {
           return -1 * repo.watchers_count;
